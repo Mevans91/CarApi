@@ -12,7 +12,7 @@ class UsersService
             first_name: first_name,
             last_name: last_name,
             location: location,
-            password_digest: password,
+            password: password,
             password_confirmation: password_confirmation
         })
         return false unless user.valid?
