@@ -11,7 +11,7 @@ class Api::V1::VehiclesController < ApplicationController
     #Get
     def show
         @vehicle = Vehicle.where(vehicle_id: params[:id])
-        render json: { vehicle: @vehicle, reviews: @reviews }
+        render json: { vehicle: @vehicle }
     end
 
     #Post
@@ -54,7 +54,7 @@ class Api::V1::VehiclesController < ApplicationController
     end
 
     def vehicle_params
-        params.require(:vehicle).permit(:make, :model, :year, :mileage, :location, :service_scheduled, :condition)
+        params.require(:vehicle).permit(:make, :model, :year, :mileage, :location, :service_scheduled, :condition, :id)
     end
 
 end
