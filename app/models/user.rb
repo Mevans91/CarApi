@@ -1,6 +1,5 @@
 class User < ApplicationRecord
     validates :email, uniqueness: true
-    has_many :vehicles 
     has_secure_password
   
   
