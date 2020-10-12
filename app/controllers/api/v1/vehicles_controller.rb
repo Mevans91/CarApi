@@ -54,7 +54,7 @@ class Api::V1::VehiclesController < ApplicationController
     end
 
     def vehicle_params
-        params.require(:vehicle).permit(:make, :model, :year, :mileage, :location, :service_scheduled, :image, :id)
+        params.require(:vehicle).permit(:make, :model, :year, :mileage, :location, :condition)
     end
 
 end
