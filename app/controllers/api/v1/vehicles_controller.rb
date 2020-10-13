@@ -10,7 +10,7 @@ class Api::V1::VehiclesController < ApplicationController
 
     #Get
     def show
-        @vehicle = Vehicle.where(vehicle_id: params[:id])
+        @vehicle = Vehicle.where(id: params[:id])
         render json: { vehicle: @vehicle }
     end
 
